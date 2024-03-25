@@ -4,7 +4,7 @@ pipeline{
   tools{
     maven 'maven'
   }
-
+stages{
 stage('validate') {
             steps {
                 sh 'mvn validate'
@@ -27,4 +27,5 @@ stage('compile') {
                 sh 'mvn package'
             }
         }
+}
 }
